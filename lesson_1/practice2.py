@@ -70,3 +70,54 @@
 # print(f'{count}  раз')
 
 
+# a = 6
+# print(a, id(a))
+
+# day_sales = [1589.5, 2687.5, 5478.2, 1236.5, 4756.5]
+# idx = 0
+# total_sales = 0
+# while idx < len(day_sales): # pre-condition
+#     total_sales = total_sales + day_sales[idx]
+#     idx = idx + 1
+# price_per_product = total_sales / len(day_sales)
+# print(price_per_product)
+
+# day_sales = [1589.5, 2687.5, 5478.2, 1236.5, 4756.5]
+# for idx, item in enumerate(day_sales, start=1):
+#     print('товар №', idx, '-', item)
+
+# Написать программу, определяющую, что число
+# трёхзначное и средняя цифра равна 5.
+# num = 354
+# res = 0
+# if (num < 99) and (num > 999):
+#     print(f'{num} не является трехзначным ')
+# else:
+#     res = (num % 100) // 10
+#     print(res == 5)
+
+# другой вариант решения
+# num = 457
+# is_three_digits = 0 < num // 100 <= 9
+# print(is_three_digits)
+#
+# tens = num % 100 // 10
+# print(tens == 5)
+
+num = int(input('Введите цифру от 0 до 100'))
+singularNom= 'процент'
+singularGen = 'процента'
+pluralGen = 'процентов'
+if(num == 1) or (num % 10 == 1):
+    print(f'{num} {singularNom}')
+elif (num == 0) or (num % 10 == 0):
+    print(f'{num} {pluralGen}')
+elif (num > 10) and (num < 20):
+    print(f'{num} {pluralGen}')
+else:
+    print(f'{num} {singularGen}')
+
+
+
+
+
