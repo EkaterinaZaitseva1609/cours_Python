@@ -2,8 +2,16 @@
 
 #********************************************************
 #List Comprehension (понимание)
+
+#!!!!!!!!!!!
+# 1. Завести переменную (результат)
+# lst =[]
+# 2. Что сделать с элементом, с каким и при каком условии
+# lst =[item for i in range(1, len(string))(откуда взять item)]
+
+#!!!!!!!!!!!!!
 # [exp for item in iterable]
-    # [exp for item in iterable (if conditional)]
+# [exp for item in iterble (if conditional)]
 
 # list = []
 # for i in range(1, 21):
