@@ -7,15 +7,18 @@
 # 1. Игра на 2-х игроков
 from random import randint
 
+def gamers (gamer_1, gamer_2):
+    current_gamer = randint(1, 2)
+    if current_gamer == 1:
+        current_gamer = gamer_1
+    else:
+        current_gamer = gamer_2
+    return current_gamer
 
 # gamer_1 = input('Игрок 1, введите ваше имя')
 # gamer_2 = input('Игрок 2, введите ваше имя')
-# current_gamer = randint(1, 2)
-# if current_gamer == 1:
-#     current_gamer = gamer_1
-# else:
-#     current_gamer = gamer_2
-#
+# current_gamer = gamers (gamer_1, gamer_2)
+
 # print(f' первый ход - игрок {current_gamer}')
 # candies = 2021
 # while candies > 0:
@@ -36,10 +39,10 @@ from random import randint
 
 
 
-# 1. Игра против бота
+# 2. Игра против бота
 # gamer_1 = input('Привет, я бот! Сегодня удача на твоей стороне, ты сможешь сравнить свой интеллект с искусственным, начнем? Напиши свое имя')
 # gamer_2 = 'Bot'
-# candies = 48
+# candies = 2021
 # current_gamer = randint(1, 2)
 # if current_gamer == 1:
 #     current_gamer = gamer_1
@@ -76,7 +79,7 @@ from random import randint
 
 
 
-# Создайте программу для игры в ""Крестики-нолики""
+# 3. Создайте программу для игры в ""Крестики-нолики""
 
 def printMap(board):
     for i in range(3):
@@ -93,31 +96,53 @@ def getWin(board):
        return False
 
 
-gamer_1 = input('Игрок 1, введите ваше имя')
-gamer_2 = input('Игрок 2, введите ваше имя')
-current_gamer = randint(1, 2)
-if current_gamer == 1:
-    current_gamer = gamer_1
-else:
-    current_gamer = gamer_2
+# gamer_1 = input('Игрок 1, введите ваше имя')
+# gamer_2 = input('Игрок 2, введите ваше имя')
+# current_gamer = gamers (gamer_1, gamer_2)
 
-board = list(range(1, 10))
-while True:
-    printMap(board)
-    player_turn = int(input(f'игрок {current_gamer} введите число от 1 до 9 включительно'))
-    if player_turn < 1 or player_turn > 9:
-        print('Ошибка игрока ')
-    elif board[player_turn - 1] == player_turn:
-        if current_gamer == gamer_1:
-         board[player_turn - 1] = 'X'
-        else:
-            board[player_turn - 1] = '0'
-    else:
-        print('Данное поле заполнено, введите другое число')
-        continue
-    if getWin(board) == True:
-        print(f'Поздравляю! Победил игрок {current_gamer}')
-        printMap(board)
-        break
-    else:
-        current_gamer = gamer_2 if current_gamer == gamer_1 else gamer_1
+#
+# board = list(range(1, 10))
+# while True:
+#     printMap(board)
+#     player_turn = int(input(f'игрок {current_gamer} введите число от 1 до 9 включительно'))
+#     if player_turn < 1 or player_turn > 9:
+#         print('Ошибка игрока ')
+#     elif board[player_turn - 1] == player_turn:
+#         if current_gamer == gamer_1:
+#          board[player_turn - 1] = 'X'
+#         else:
+#             board[player_turn - 1] = '0'
+#     else:
+#         print('Данное поле заполнено, введите другое число')
+#         continue
+#     if getWin(board) == True:
+#         print(f'Поздравляю! Победил игрок {current_gamer}')
+#         printMap(board)
+#         break
+#     else:
+#         current_gamer = gamer_2 if current_gamer == gamer_1 else gamer_1
+
+
+# 4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
+# Входные и выходные данные хранятся в отдельных текстовых файлах.
+
+def getRes(n_str):
+    res = ''
+    i = 0
+    while i < len(n_str):
+        count = 1
+        while i + 1 < len(n_str) and n_str[i] == n_str[i + 1]:
+            count = count + 1
+            i = i + 1
+        res += str(count) + n_str[i]
+        i = i + 1
+    print(res)
+    return res
+
+data = open('4Task_homeWork.txt', 'r+')
+n_str = data.read()
+encoding = getRes(n_str)
+data.write(encoding)
+
+data.close()
+
