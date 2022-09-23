@@ -57,12 +57,12 @@
 # 5.Напишите программу, которая принимает на вход координаты двух точек и находит
 # расстояние между ними в 2D пространстве.
 
-import math
-x_1 = int(input('X1 -->'))
-y_1 = int(input('Y1 -->'))
-x_2 = int(input('X2 -->'))
-y_2 = int(input('Y2 -->'))
-res1 = (x_2 - x_1) ** 2
-res2 = (y_2 - y_1) ** 2
-result = math.sqrt(res1 + res2)
-print(round(result, 2))
+# import math
+# x_1 = int(input('X1 -->'))
+# y_1 = int(input('Y1 -->'))
+# x_2 = int(input('X2 -->'))
+# y_2 = int(input('Y2 -->'))
+# res1 = (x_2 - x_1) ** 2
+# res2 = (y_2 - y_1) ** 2
+# result = math.sqrt(res1 + res2)
+# print(round(result, 2))
