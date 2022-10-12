@@ -4,7 +4,7 @@ from telebot import types
 import xlsxwriter
 import log
 
-# bot = telebot.TeleBot('5741142965:AAF_UUmDgvjfyA2o1B396I-mAVYBSWankgw')
+# bot = telebot.TeleBot('токин')
 bot = telebot.TeleBot(config.token)
 
 user_num1 = ''
