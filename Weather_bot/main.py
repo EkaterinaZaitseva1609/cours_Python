@@ -5,12 +5,10 @@ from geopy import geocoders
 from os import environ
 
 token = 'токин'
-token_accu ='1lRmGYgGDF19GkBnWo5YjtN9shp6xyme'
-token_yandex ='6d08f2be-dd8e-4420-9570-033e576667ff'
+token_accu ='токин'
+token_yandex ='токин'
 
-# token = environ['5600925078:AAFkYdBANV5eeyze7YN1R1u5F9vp6DKynl4']
-# token_accu = environ['1lRmGYgGDF19GkBnWo5YjtN9shp6xyme']
-# token_yandex = environ['6d08f2be-dd8e-4420-9570-033e576667ff']
+
 
 
 def code_location(latitude: str, longitude: str, token_accu: str):
